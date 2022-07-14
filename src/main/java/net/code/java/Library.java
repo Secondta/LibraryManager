@@ -7,15 +7,16 @@ import javax.persistence.Id;
 
 @Entity
 public class Library {
-    private Long id;
-    private Long name_of_books;
-    private Long publication_year;
-    private Long creation;
+    private String name_of_books;
+    private String publication_year;
+    private String creation;
     protected Library() {
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
     public Long getId() {
         return id;
     }
@@ -24,27 +25,27 @@ public class Library {
         this.id = id;
     }
 
-    public Long getName_of_books() {
+    public String getName_of_books() {
         return name_of_books;
     }
 
-    public void setName_of_books(Long name_of_books) {
+    public void setName_of_books(String name_of_books) {
         this.name_of_books = name_of_books;
     }
 
-    public Long getPublication_year() {
+    public String getPublication_year() {
         return publication_year;
     }
 
-    public void setPublication_year(Long publication_year) {
+    public void setPublication_year(String publication_year) {
         this.publication_year = publication_year;
     }
 
-    public Long getCreation() {
+    public String getCreation() {
         return creation;
     }
 
-    public void setCreation(Long creation) {
+    public void setCreation(String creation) {
         this.creation = creation;
     }
 }
